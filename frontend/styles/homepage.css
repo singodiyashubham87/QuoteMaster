@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', arial, helvetica, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #FFACC7;
+}
+
+div.left{
+    width: 30%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.right{
+    width: 25%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.right h1{
+    color: #252A2B;
+    font-size: 4rem;
+    line-height: 1;
+    width: 100%;
+    font-weight: 400;
+}
+
+.right form{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+form select, form input{
+    width: 90%;
+    border-radius: 3rem;
+    border: none;
+}
+
+form select{
+    height: 30%;
+    color: #252A2BB2;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+}
+
+form input{
+    height: 40%;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #363A3C;
+}
+
+
+/* Responsiveness */
+
+@media screen and (max-width: 1499px){
+    div.left{
+        width: 40%;
+    }
+    div.right{
+        width: 35%;
+    }
+}
+
+
+@media screen and (max-width: 1158px){
+    div.left{
+        width: 40%;
+    }
+    div.right{
+        width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 1011px){
+
+    div.left{
+        width: 45%;
+    }
+    div.right{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    div.right{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 891px){
+    div.left{
+        width: 50%;
+    }
+    div.right{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 812px){
+    img.teddy{
+        width: 100%;
+    }
+
+    div.right{
+        height: 30vh;
+    }
+
+    .right h1{
+        font-size: 2.5rem;
+    }
+
+    .right form{
+        height: 60%;
+        width: 90%;
+    }
+
+    form input{
+        font-size: 1.5rem;
+    }
+
+    div.left{
+        width: 40%;
+    }
+    div.right{
+        width: 40%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 691px){
+    div.right{
+        height: 20vh;
+    }
+
+    .right h1{
+        font-size: 2rem;
+    }
+
+    form select{
+        font-size: 1.2rem;
+    }
+
+    form input{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 591px){
+    div.right{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 451px){
+    div.right{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 391px){
+    main{
+        flex-direction: column-reverse;
+    }
+
+    div.left{
+        width: 70%;
+    }
+
+    div.right{
+        width: 80%;
+    }
+}
+
