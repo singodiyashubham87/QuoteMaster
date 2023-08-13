@@ -71,11 +71,22 @@ form select{
     overflow-y: auto;
 }
 
+select:hover, input{
+    cursor: pointer;
+}
+
 form input{
     height: 40%;
     font-size: 2rem;
     color: #fff;
     background-color: #363A3C;
+}
+
+input:hover{
+    background-color: #fff;
+    color: #363A3C;
+    box-shadow: inset 0px 0px 5px 2px #000;
+    transition: all .3s ease-in-out;
 }
 
 
