@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', arial, helvetica, sans-serif;
+    border: none;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #FFACC7;
+}
+
+div.left{
+    width: 30%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.right{
+    width: 35%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right select{
+    color: #252A2BB2;
+    width: 60%;
+    height: 15%;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    border-radius: 3rem;
+}
+
+.right select:hover{
+    cursor: pointer;
+}
+
+.quote{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote .quoteText{
+    background-color: #363A3C;
+    color: #fff;
+    width: 100%;
+    border-radius: 1rem;
+    margin: .5rem 0;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.quoteButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quoteButtons button, .quoteButtons div{
+    padding: .2rem 1rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+}
+
+.quoteButtons button{
+    color: #000000B2;
+}
+
+.quoteButtons button:hover{
+    background-color: #363A3C;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.quoteButtons div{  
+    background-color: #363A3C;
+    color: #fff;
+}
+
+
+
+
+/* Responsiveness */
+
+@media screen and (max-width: 1599px){
+    div.right{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 1399px){
+    div.left{
+        width: 40%;
+    }
+    div.right{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1399px){
+    .quote .quoteText{
+        font-size: 1.6rem;
+    }
+    .quoteButtons button, .quoteButtons div{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 991px){
+    img.teddy{
+        width: 90%;
+    }
+    div.left{
+        width: 35%;
+    }
+    div.right{
+        width: 60%;
+    }
+    .quote .quoteText{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 891px){
+
+    .right select{
+        width: 60%;
+        height: 12%;
+        font-size: 1.2rem;
+    }
+
+    .quote .quoteText{
+        font-size: 1.5rem;
+    }
+
+    .quoteButtons button, .quoteButtons div{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 591px){
+
+    .right select{
+        width: 70%;
+        height: 10%;
+        font-size: 1.2rem;
+    }
+
+    .quote .quoteText{
+        font-size: 1.2rem;
+    }
+
+    .quoteButtons button, .quoteButtons div{
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 491px){
+    img.teddy{
+        width: 100%;
+    }
+    main{
+        flex-direction: column;
+    }
+
+    div.left{
+        height: fit-content;
+    }
+
+    div.right{
+        height: 30vh;
+        width: 90%;
+    }
+
+    .right select{
+        width: 60%;
+        height: 20%;
+        font-size: 1.2rem;
+    }
+
+    .quote .quoteText{
+        font-size: 1.5rem;
+    }
+
+    .quoteButtons button, .quoteButtons div{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 391px){
+
+    .right select{
+        height: 12%;
+    }
+    
+    .quote .quoteText{
+        font-size: 1.2rem;
+    }
+
+    .quoteButtons button, .quoteButtons div{
+        font-size: 0.9rem;
+    }
+}
