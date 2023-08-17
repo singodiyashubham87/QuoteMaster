@@ -52,6 +52,12 @@ body{
     background-color: #FFACC7;
 }
 
+.parentContainer button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .3s ease;
+}
+
 @media screen and (max-width: 1499px){
     .parentContainer{
         width: 70%;
