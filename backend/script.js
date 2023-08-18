@@ -1,6 +1,9 @@
+require('dotenv').config();
+
 const express = require("express");
 const path = require("path");
 const port = process.env.PORT || 8000;
+const apiKey = process.env.API_KEY;
 
 const app = express();
 
@@ -26,7 +29,7 @@ app.get("/quote", (req, res) => {
 app.post("/quote", async (req,res)=>{
   const requestURL = "https://api.api-ninjas.com/v1/quotes?category=" + req.body.selectedCategory;
     const header = {
-        "X-Api-Key": "IprtatWDIjQHnJJYCiDddA==NgKrWLCtAAZuPfy4",
+        "X-Api-Key": apiKey,
     };
     try {
         const response = await fetch(requestURL,{headers:header});

@@ -1,5 +1,4 @@
 const letsGo = document.getElementById("submit");
-const greeting = document.getElementById("greet");
 
 //Greeting
 const hours = new Date().getHours();
@@ -10,12 +9,13 @@ if(hours<=17 & hours>=5){
     greet = hours<22?"Evening":"Night";
 }
 
-greeting.textContent = greet;
+
 
 
 letsGo.addEventListener("click", function(){
     const userName = document.getElementById("userName").value;
     localStorage.setItem("userName", userName);
+    localStorage.setItem("greeting", greet);
     window.location.href = "/homepage";
 })
 

@@ -27,8 +27,8 @@ document
         body: JSON.stringify({ selectedCategory }),
       });
       const resData = await res.json();
-      quoteElement.textContent = resData.resObj[0].quote;
-      authorDiv.textContent = "--" + resData.resObj[0].author;
+      quoteElement.textContent = await resData.resObj.quote;
+      authorDiv.textContent = "--" + resData.resObj.author;
     } catch (error) {
       console.error("Error = ", error);
     }

@@ -1,4 +1,6 @@
 document.getElementById("name").innerText = localStorage.getItem("userName");
+const greeting = document.getElementById("greet");
+greeting.textContent = localStorage.getItem("greeting");;
 
 document.getElementById('myForm').addEventListener('submit',async (event)=> {
     event.preventDefault();
