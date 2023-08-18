@@ -1,4 +1,5 @@
 <h1 align="center">QuoteMaster</h1>
+<div align="center"><img src="./frontend/images/teddy.png" alt="logo" width="100px"/></div>
 QuoteMaster is a web application that allows you to generate and display quotes based on different categories. It fetches quotes from the API Ninjas API and displays them in a user-friendly interface. You can select from various categories and get inspirational quotes to brighten your day.
 
 ## Features:
