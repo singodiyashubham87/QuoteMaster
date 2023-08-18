@@ -1,54 +1,44 @@
 const express = require("express");
-const cors = require("cors");
 const path = require("path");
-const { type } = require("os");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 const app = express();
 
-const staticPath = path.join(__dirname, "../frontend/");
+const staticPath = path.join(__dirname,"..","frontend","views");
+const assetsPath = path.join(__dirname,"..","frontend");
 
 //Middlewares
-app.use(cors());
 app.use(express.json());
 app.use(express.static(staticPath));
+app.use(express.static(assetsPath));
+
 
 app.get("/homepage", (req, res) => {
   res.setHeader("Content-Type", "text/html");
-  res.sendFile(staticPath + "views/Homepage.html");
+  res.sendFile(staticPath + "/Homepage.html");
 });
 
-// Homepage get request endpoint handler 
 app.get("/quote", (req, res) => {
   res.setHeader("Content-Type", "text/html");
-  res.sendFile(staticPath + "views/Quote.html");
+  res.sendFile(staticPath + "/Quote.html");
 });
 
-
-// Next Button Post request endpoint handler
-app.post("/quote",async (req,res)=>{
-  const selectedCategory = req.body.category || "";
-    const requestURL = "https://api.api-ninjas.com/v1/quotes?category=" + selectedCategory;
+app.post("/quote", async (req,res)=>{
+  const requestURL = "https://api.api-ninjas.com/v1/quotes?category=" + req.body.selectedCategory;
     const header = {
         "X-Api-Key": "IprtatWDIjQHnJJYCiDddA==NgKrWLCtAAZuPfy4",
     };
     try {
-        const response = await fetch(requestURL, { headers: header });
-        const responseData = await response.json();
-        const quote = responseData[0].quote;
-        const author = responseData[0].author;
-        const resp = {
-          quote: quote,
-          author: author,
+        const response = await fetch(requestURL,{headers:header});
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
         }
-        res.json(resp);
-    } catch (error) {
-        console.error("Error:", error);
-        res.status(500).send("An error occurred.");
-    }
+        const resArray = await response.json();
+        res.send({resObj: resArray[0]});
+      } catch (error) {
+        console.error("Error = ", error);
+      }
 })
-
-
 
 
 app.listen(port, (req, res) => {
