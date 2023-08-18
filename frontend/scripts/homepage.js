@@ -1,6 +1,6 @@
 document.getElementById("name").innerText = localStorage.getItem("userName");
 const greeting = document.getElementById("greet");
-greeting.textContent = localStorage.getItem("greeting");;
+greeting.textContent = localStorage.getItem("greeting");
 
 document.getElementById('myForm').addEventListener('submit',async (event)=> {
     event.preventDefault();
@@ -13,6 +13,7 @@ document.getElementById('myForm').addEventListener('submit',async (event)=> {
       body:JSON.stringify({selectedCategory})
     });
     const resData = await res.json();
+    if(selectedCategory !== "") localStorage.setItem("category", "random");
       localStorage.setItem("category", selectedCategory);
       localStorage.setItem("quote",JSON.stringify({quoteData:resData.resObj}));
       return window.location.href = "/quote";

@@ -6,10 +6,14 @@ const authorDiv = document.querySelector(".quoteButtons div");
 const quoteObj = JSON.parse(localStorage.getItem("quote"));
 quoteElement.textContent = quoteObj.quoteData.quote;
 authorDiv.textContent = "--" + quoteObj.quoteData.author;
-for (let i = 0; i < categorySelect.options.length; i++) {
-  if (categorySelect.options[i].value.toLowerCase() === quoteObj.quoteData.category) {
-    categorySelect.selectedIndex = i;
-    break;
+
+if(localStorage.getItem("category") == "random")  categorySelect.selectedIndex = 0;
+else{
+  for (let i = 0; i < categorySelect.options.length; i++) {
+    if (categorySelect.options[i].value.toLowerCase() === quoteObj.quoteData.category) {
+      categorySelect.selectedIndex = i;
+      break;
+    }
   }
 }
 

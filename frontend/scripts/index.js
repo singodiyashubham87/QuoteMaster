@@ -10,9 +10,6 @@ if(hours<=17 && hours>=5){
     else greet="Night";
 }
 
-
-
-
 letsGo.addEventListener("click", function(){
     const userName = document.getElementById("userName").value;
     localStorage.setItem("userName", userName);
