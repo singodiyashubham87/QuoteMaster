@@ -5,7 +5,6 @@ greeting.textContent = localStorage.getItem("greeting");;
 document.getElementById('myForm').addEventListener('submit',async (event)=> {
     event.preventDefault();
     const selectedCategory = document.getElementById('category').value;
-    
     const res = await fetch("/quote",{
       method: 'POST',
       headers: {

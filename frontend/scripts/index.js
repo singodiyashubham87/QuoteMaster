@@ -3,10 +3,11 @@ const letsGo = document.getElementById("submit");
 //Greeting
 const hours = new Date().getHours();
 let greet = "";
-if(hours<=17 & hours>=5){
+if(hours<=17 && hours>=5){
     greet = hours<12?"Morning":"Afternoon";
 }else{
-    greet = hours<22?"Evening":"Night";
+    if(hours>17 && hours<22)   greet="Evening";
+    else greet="Night";
 }
 
 
