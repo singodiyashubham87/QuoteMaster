@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const express = require("express");
+const cors = require("cors");
 const path = require("path");
 const port = process.env.PORT || 8000;
 const apiKey = process.env.API_KEY;
@@ -11,6 +12,7 @@ const staticPath = path.join(__dirname,"..","frontend","views");
 const assetsPath = path.join(__dirname,"..","frontend");
 
 //Middlewares
+app.use(cors());
 app.use(express.json());
 app.use(express.static(staticPath));
 app.use(express.static(assetsPath));
