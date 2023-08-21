@@ -9,20 +9,22 @@ QuoteMaster is a web application that allows you to generate and display quotes 
 
 ## Installation: 
 
-Clone this repository to your local machine using:</br>
+* Clone this repository to your local machine using:</br>
 `git clone https://github.com/your-username/quote-master.git`
 
-Navigate to the project directory:</br>
+* Navigate to the project directory:</br>
 `cd QuoteMaster`
 
-Install the required dependencies:</br>
+* Install the required dependencies:</br>
 `cd backend`</br>
 `npm install`
 
-Start the Express server:</br>
+* Rename *.env.local* to *.env* and replace **YOUR_API_NINJAS_API_KEY** with your actual API keys.
+
+* Start the Express server:</br>
 `npm start`</br>
 
-Open your web browser and visit http://localhost:3000 to access the QuoteMaster web app.
+* Open your web browser and visit http://localhost:3000 to access the QuoteMaster web app.
 
 ## Usage:
 * Select a category from the dropdown list.
