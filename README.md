@@ -41,7 +41,7 @@ QuoteMaster is a web application that allows you to generate and display quotes 
 * API Ninjas API
 
 ## Credits
-The API used for fetching quotes is provided by API Ninjas.
+The API used for fetching the quotes is provided by API Ninjas.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
